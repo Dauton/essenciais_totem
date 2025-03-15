@@ -1,0 +1,30 @@
+.div-btns {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+button {
+    width: fit-content;
+    padding: 6px 15px;
+    border: 1px solid var(--primary-color);
+    border-radius: 2px;
+    background: var(--primary-color);
+    font-size: 11px;
+    color: #fff;
+    cursor: pointer;
+}
+button:hover {
+    background: var(--hover-primary-color);
+    border: 1px solid var(--hover-primary-color)
+}
+
+#btn-cancelar {
+    background: #fff;
+    color: var(--primary-color);
+}
+
+#btn-cancelar:hover {
+    background: var(--hover-primary-color);
+    color: #fff;
+}

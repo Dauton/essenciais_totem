@@ -1,0 +1,43 @@
+@import url('login.css');
+@import url('menu-lateral.css');
+@import url('table.css');
+@import url('buttons.css');
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 .3em #cdcdcd;
+    text-align: center;
+}
+
+table thead tr th {
+    background: var(--primary-color);
+    padding: 10px;
+    color: #fff;
+}
+
+table tbody tr td {
+    padding: 10px;
+}
+table tbody tr:nth-child(even) {
+    background: #f5f5f5;
+}
+
+table i {
+    margin: 0 5px;
+    font-size: 25px;
+    cursor: pointer;
+}
+table i:hover {
+    filter: brightness(50%);
+}
+
+.fa-square-xmark {
+    color: #bc0000
+}
+.fa-square-pen {
+    color: #00bc00
+}
+.fa-eye {
+    color: #0080a0;
+}

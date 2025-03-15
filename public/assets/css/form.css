@@ -1,0 +1,92 @@
+form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 35px;
+    border-radius: 3px;
+    background: #fff;
+    overflow: scroll;
+}
+
+#form-user-page {
+    padding: 70px 30px 30px 30px;
+    justify-content: left;
+    gap: 0 20px;
+    position: relative;
+    box-shadow: 0 0 .3em #cdcdcd;
+}
+#form-user-page .contents-cabecalho {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#form-user-page label {
+    width: 49%;
+    padding: 0;
+}
+
+
+
+form .contents-cabecalho {
+    font-size: 11px;
+    border-radius: 3px 3px 0 0;
+}
+
+form label {
+    width: 100%;
+    padding: 20px 30px 10px 30px;
+    margin: 0 0 10px 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+}
+
+form label div {
+    height: 40px;
+    margin: 3px 0 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    background: #f0f4fc;
+    border-radius: 3px;
+}
+
+form label div i {
+    width: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: #606060;
+    z-index: 1
+}
+
+form label div input,
+form label div select {
+    width: 100%;
+    padding: 12px 12px 12px 40px;
+    position: absolute;
+    border: none;
+    font-size: 12px;
+    background: transparent;
+}
+form label div input:focus,
+form label div select:focus {
+    outline-color: var(--primary-color);
+}
+
+form .div-btns {
+    width: 100%;
+    justify-content: left;
+}
+
+.msg-input-erro {
+    color: #ff6c6c;
+}
+
+
+.box-form {
+    width: 48%;
+    box-shadow: 0 0 .3em #cdcdcd;
+}

@@ -1,0 +1,78 @@
+.menu-lateral {
+    width: 240px;
+    height: 100%;
+    padding: 15px 15px 15px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: 0 0 .3em #cdcdcd;
+    background: var(--primary-color);
+}
+
+.menu-lateral img {
+    width: 130px;
+    margin: 0 0 20px 0;
+}
+
+.menu-lateral ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-lateral ul li a {
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 2px;
+    color: #000;
+    text-decoration: none;
+    font-size: 13px;
+    background: #fff;
+}
+
+.menu-lateral ul li a:hover {
+    filter: brightness(80%);
+}
+
+.menu-lateral ul li a i {
+    width: 20px;
+    color: #2d2d2d;
+    text-align: center;
+    font-size: 12px;
+}
+.menu-lateral ul li a .fa-angle-right {
+    font-size: 10px;
+}
+
+.menu-lateral-rodape {
+    width: 100%;
+    margin-top: auto;
+    padding: 10px 0;
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+    border-radius: 3px;
+    color: #fff;
+}
+
+.menu-lateral-rodape i {
+    font-size: 40px;
+}
+
+.menu-lateral-rodape div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.menu-lateral-rodape p {
+    width: 100%;
+    font-size: 12px;
+}
