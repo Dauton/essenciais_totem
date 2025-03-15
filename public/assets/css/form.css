@@ -91,6 +91,11 @@ form .div-btns {
     box-shadow: 0 0 .3em #cdcdcd;
 }
 
+#box-form-first {
+    width: 99%;
+    height: fit-content;
+}
+
 .required-input {
     color: #f00;
 }

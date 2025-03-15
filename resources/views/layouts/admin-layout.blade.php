@@ -32,14 +32,13 @@
         <section class="centro">
 
             @yield('content')
-
             <footer class="rodape">
                 <p> &copy; {{date('Y')}} - ID DO BRASIL LOGÍSTICA LTDA.</p>
             </footer>
-
         </section>
 
     </main>
+
 
 </body>
 

@@ -13,17 +13,23 @@
 
         <form method="post" action="/createSite">
             @csrf
-            <label for="site">
-                <p>Qual o site?<span class="required-input"> *</span></p>
-                <div>
-                    <i class="fa-solid fa-industry"></i>
-                    <input type="text" name="site" id="site" placeholder="Nome do site"
-                        value="{{ old('site') }}">
-                </div>
-                @error('site')
-                    <p class="msg-input-erro">{{ $message }}</p>
-                @enderror
-            </label>
+
+            <div class="box-form" id="box-form-first">
+                <header class="contents-cabecalho">
+                    <h2>Ferramenta 01</h2>
+                </header>
+                <label for="site"">
+                    <p>Qual o site?<span class="required-input"> *</span></p>
+                    <div>
+                        <i class="fa-solid fa-industry"></i>
+                        <input type="text" name="site" id="site" placeholder="Nome do site"
+                            value="{{ old('site') }}">
+                    </div>
+                    @error('site')
+                        <p class="msg-input-erro">{{ $message }}</p>
+                    @enderror
+                </label>
+            </div>
 
             <div class="box-form">
                 <header class="contents-cabecalho">

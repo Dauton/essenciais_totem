@@ -30,7 +30,7 @@
     justify-content: space-between;
     align-items: center;
     border-radius: 2px;
-    color: #000;
+    color: #525252;
     text-decoration: none;
     font-size: 13px;
     background: #fff;
@@ -42,7 +42,7 @@
 
 .menu-lateral ul li a i {
     width: 20px;
-    color: #2d2d2d;
+    color: #525252;
     text-align: center;
     font-size: 12px;
 }
