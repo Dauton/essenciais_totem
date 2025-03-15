@@ -90,3 +90,7 @@ form .div-btns {
     width: 48%;
     box-shadow: 0 0 .3em #cdcdcd;
 }
+
+.required-input {
+    color: #f00;
+}

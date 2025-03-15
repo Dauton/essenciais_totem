@@ -8,10 +8,13 @@
     <section class="conteudo">
 
         <h2>Cadastrar um novo site</h2>
+
+        <p class="alert-text">É obrigatório o cadastro de pelo menos uma ferramenta.</p>
+
         <form method="post" action="/createSite">
             @csrf
             <label for="site">
-                Qual o site?
+                <p>Qual o site?<span class="required-input"> *</span></p>
                 <div>
                     <i class="fa-solid fa-industry"></i>
                     <input type="text" name="site" id="site" placeholder="Nome do site"
@@ -27,7 +30,7 @@
                     <h2>Ferramenta 01</h2>
                 </header>
                 <label for="titulo_url01">
-                    Título URL 01
+                    <p>Título URL 01<span class="required-input"> *</span></p>
                     <div>
                         <i class="fa-solid fa-file-pen"></i>
                         <input type="text" name="titulo_url01" id="titulo_url01" placeholder="Título da ferramenta 01"
@@ -36,7 +39,7 @@
                     @error('titulo_url01')
                         <p class="msg-input-erro">{{ $message }}</p>
                     @enderror
-                    URL 01
+                    <p>URL 01<span class="required-input"> *</span></p>
                     <div>
                         <i class="fa-solid fa-link"></i>
                         <input type="text" name="url01" id="url01" placeholder="URL da ferramenta 01"

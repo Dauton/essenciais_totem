@@ -14,7 +14,8 @@
             <header class="contents-cabecalho">
                 <h2>Dados do usuário</h2>
             </header>
-            <label for="nome_usuario">Nome completo
+            <label for="nome_usuario">
+            <p>Nome completo<span class="required-input"> *</span></p>
                 <div>
                     <i class="fa-solid fa-user"></i>
                     <input type="text" name="nome_usuario" id="nome_usuario" placeholder="Nome completo do usuário"
@@ -25,7 +26,8 @@
                 @enderror
             </label>
 
-            <label for="usuario">Usuário de acesso
+            <label for="usuario">
+                <p>Usuário de acesso<span class="required-input"> *</span></p>
                 <div>
                     <i class="fa-solid fa-user-tag"></i>
                     <input type="text" name="usuario" id="usuario" placeholder="Usuário de acesso"
@@ -36,7 +38,8 @@
                 @enderror
             </label>
 
-            <label for="site">Site
+            <label for="site">
+                <p>Site<span class="required-input"> *</span></p>
                 <div>
                     <i class="fa-solid fa-industry"></i>
                     <select>
@@ -51,7 +54,8 @@
                 @enderror
             </label>
 
-            <label for="senha">Senha
+            <label for="senha">
+                <p>Senha<span class="required-input"> *</span></p>
                 <div>
                     <i class="fa-solid fa-lock"></i>
                     <input type="text" name="senha" id="senha" placeholder="Senha de acesso"
@@ -62,7 +66,8 @@
                 @enderror
             </label>
 
-            <label for="repete_senha">Repita a senha
+            <label for="repete_senha">
+                <p>Repita a senha<span class="required-input"> *</span></p>
                 <div>
                     <i class="fa-solid fa-lock"></i>
                     <input type="text" name="repete_senha" id="repete_senha" placeholder="Repita a senha de acesso"
@@ -75,7 +80,7 @@
 
             <div class="div-btns">
                 <button type="submit">Submeter</button>
-                <a href="/sites"><button type="button" id="btn-cancelar">Cancelar</button></a>
+                <a href="/users"><button type="button" id="btn-cancelar">Cancelar</button></a>
             </div>
 
         </form>
