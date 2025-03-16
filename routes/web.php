@@ -32,13 +32,13 @@ use Illuminate\Support\Facades\Route;
         // EXIBIÇÕES DE PÁGINAS...
 
             // EXIBIÇÃO DA PÁGNIA HOME...
-            Route::get('/home', [PagesController::class, 'showHomePage']);
+            Route::get('/home', [PagesController::class, 'showHomePage'])->name('home');
 
             // EXIBIÇÃO DA PÁGINA DE CRIAÇÃO DE SITE...
-            Route::get('/create-site', [PagesController::class, 'showCreateSitePage']);
+            Route::get('/create-site', [PagesController::class, 'showCreateSitePage'])->name('newSite');
 
             // EXIBIÇÃO DA PÁGINA DE SITES...
-            Route::get('/sites', [PagesController::class, 'showSitesPage']);
+            Route::get('/sites', [PagesController::class, 'showSitesPage'])->name('sites');
 
 
             // VERIRICAÇÃO DO PERFIL DO USUÁRIO...
@@ -47,10 +47,10 @@ use Illuminate\Support\Facades\Route;
                 // EXIBIÇÕES...
 
                     // EXIBIÇÃO DA PÁGINA DE USUÁRIOS...
-                    Route::get('/users', [PagesController::class, 'showUsersPage']);
+                    Route::get('/users', [PagesController::class, 'showUsersPage'])->name('users');
 
                     // EXIBIÇÃO DA PÁGINA DE CRIAÇÃO DE USUÁRIO...
-                    Route::get('/create-user', [PagesController::class, 'showCreateUserPage']);
+                    Route::get('/create-user', [PagesController::class, 'showCreateUserPage'])->name('newUser');
 
 
                 // EXECUÇÕES...
@@ -59,7 +59,7 @@ use Illuminate\Support\Facades\Route;
                     Route::post('/createUser', [CreateUserController::class, 'createUser']);
             });
 
-            
+
             // CRIAÇÃO DE SITE...
             Route::post('/createSite', [CreateSiteController::class, 'createSite']);
 
@@ -67,7 +67,7 @@ use Illuminate\Support\Facades\Route;
         // AUTENTICAÇÕES...
 
             // LOGOUT...
-            Route::get('/logout', [AuthController::class, 'logout']);
+            Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
     });
 
@@ -77,7 +77,7 @@ use Illuminate\Support\Facades\Route;
         // EXIBIÇÕES...
 
             // EXIBIÇÃO DA PÁGINA DE LOGIN...
-            Route::get('/login', [PagesController::class, 'showLoginPage']);
+            Route::get('/login', [PagesController::class, 'showLoginPage'])->name('login');
 
 
         // AUTENTICAÇÕES...

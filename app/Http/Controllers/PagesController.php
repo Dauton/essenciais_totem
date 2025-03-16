@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Site;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -23,7 +25,9 @@ class PagesController extends Controller
 
     public function showHomePage()
     {
-        return view('home');
+        $site = Site::where('site', session('user.site_usuario'))->first();
+
+        return view('home', compact('site'));
     }
 
     public function showSitesPage()

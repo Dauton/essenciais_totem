@@ -19,7 +19,7 @@ class AuthController extends Controller
 
         $user = User::where('usuario', $usuario)->where('deleted_at', NULL)->first();
 
-        $error = redirect()->back()->withInput()->with('loginError', "Credenciais (usuário ou senha) inválidas");
+        $error = redirect()->back()->withInput()->with('loginError', "As credenciais informadas são inválidas.");
 
         if(!$user) {
             return $error;

@@ -18,7 +18,7 @@ class CheckLogged
         // SE O USUÁRIO NÃO ESTIVER LOGADO, SERÁ REDIRECIONADO PARA REALIZAR O LOGIN...
         if(!session('user'))
         {
-            return redirect('/login');
+            return redirect('/login')->with('loginError', 'Efetue o login para acessar a ferramenta.');
         }
 
         return $next($request);

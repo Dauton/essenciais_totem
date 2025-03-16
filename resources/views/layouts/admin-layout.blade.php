@@ -7,12 +7,14 @@
 
         <nav class="menu-lateral">
 
-            <img src="{{asset("assets/img/id-logo-branco-extenso.png")}}" alt="Logo" class="menu-lateral-logo">
+            <a href="{{ route('home') }}">
+                <img src="{{asset("assets/img/id-logo-branco-extenso.png")}}" alt="Logo" class="menu-lateral-logo">
+            </a>
 
             <ul>
-                <li><a href="{{ asset("/home") }}"><i class="fa-solid fa-house-chimney"></i>Home<i class="fa-solid fa-angle-right"></i></a></li>
-                <li><a href="{{ asset("/sites") }}"><i class="fa-solid fa-industry"></i>Sites<i class="fa-solid fa-angle-right"></i></a></li>
-                <li><a href="{{ asset("/users") }}"><i class="fa-solid fa-users"></i>Usuários<i class="fa-solid fa-angle-right"></i></a></li>
+                <li><a href="{{ route("home") }}"><i class="fa-solid fa-house-chimney"></i>Home<i class="fa-solid fa-angle-right"></i></a></li>
+                <li><a href="{{ route("sites") }}"><i class="fa-solid fa-industry"></i>Sites<i class="fa-solid fa-angle-right"></i></a></li>
+                <li><a href="{{ route("users") }}"><i class="fa-solid fa-users"></i>Usuários<i class="fa-solid fa-angle-right"></i></a></li>
             </ul>
 
             <footer class="menu-lateral-rodape">
@@ -26,7 +28,7 @@
             </footer>
 
             <ul>
-                <li><a href="/logout"><i class="fa-solid fa-door-open"></i>Sair<i class="fa-solid fa-angle-right"></i></a></li>
+                <li><a href="{{route('logout')}}"><i class="fa-solid fa-door-open"></i>Sair<i class="fa-solid fa-angle-right"></i></a></li>
             </ul>
 
         </nav>
@@ -34,10 +36,9 @@
         <section class="centro">
 
             @yield('content')
-            <footer class="rodape">
-                <p>Essenciais totem</p>
-                <p> &copy; {{date('Y')}} - ID DO BRASIL LOGÍSTICA LTDA.</p>
-            </footer>
+
+            @include('footer')
+
         </section>
 
     </main>
