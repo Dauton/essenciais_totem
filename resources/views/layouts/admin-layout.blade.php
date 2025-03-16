@@ -2,6 +2,7 @@
 @section('head')
 
 <body>
+
     <main class="principal">
 
         <nav class="menu-lateral">
@@ -19,7 +20,8 @@
                 <div>
                     <h4>Bem-vindo(a)!</h4>
                     <p>{{session('user.nome_usuario')}}</p>
-                    <p>{{session('user.site_usuario')}}</p>
+                    <p>{{session('user.site_usuario')}} - {{session('user.perfil')}}</p>
+
                 </div>
             </footer>
 
@@ -33,12 +35,16 @@
 
             @yield('content')
             <footer class="rodape">
+                <p>Essenciais totem</p>
                 <p> &copy; {{date('Y')}} - ID DO BRASIL LOGÍSTICA LTDA.</p>
             </footer>
         </section>
 
     </main>
 
+    @if (session('permissionError'))
+        <p class="alert-error">{{session('permissionError')}}</p>
+    @endif
 
 </body>
 

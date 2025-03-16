@@ -19,7 +19,6 @@
             <tr>
                 <th>UNIDADE</th>
                 <th>GERENCIAR</th>
-                <th>VISITAR</th>
             </tr>
         </thead>
         <tbody>
@@ -28,24 +27,24 @@
                 <td>
                     <i class="fa-solid fa-square-pen" title="Editar unidade"></i>
                     <i class="fa-solid fa-square-xmark" title="Excluir unidade"></i>
+                    <a href="/site" target="_blank"><i class="fa-solid fa-eye" title="Visitar unidade"></i></a>
                 </td>
-                <td><a href="/site" target="_blank"><i class="fa-solid fa-eye" title="Visitar unidade"></i></a></td>
             </tr>
             <tr>
-                <td>CDAMBEX</td>
+                <td>CDARCEX</td>
                 <td>
                     <i class="fa-solid fa-square-pen" title="Editar unidade"></i>
                     <i class="fa-solid fa-square-xmark" title="Excluir unidade"></i>
+                    <a href="/site" target="_blank"><i class="fa-solid fa-eye" title="Visitar unidade"></i></a>
                 </td>
-                <td><i class="fa-solid fa-eye" title="Visitar unidade"></i></td>
             </tr>
             <tr>
-                <td>CDYPEEX</td>
+                <td>CDARCEX</td>
                 <td>
                     <i class="fa-solid fa-square-pen" title="Editar unidade"></i>
                     <i class="fa-solid fa-square-xmark" title="Excluir unidade"></i>
+                    <a href="/site" target="_blank"><i class="fa-solid fa-eye" title="Visitar unidade"></i></a>
                 </td>
-                <td><i class="fa-solid fa-eye"title="Visitar unidade"></i></td>
             </tr>
         </tbody>
     </table>

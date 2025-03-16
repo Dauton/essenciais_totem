@@ -71,9 +71,14 @@ form label div select {
     font-size: 12px;
     background: transparent;
 }
+
 form label div input:focus,
 form label div select:focus {
     outline-color: var(--primary-color);
+}
+
+form label div select option {
+    text-indent: -10px;
 }
 
 form .div-btns {
@@ -98,4 +103,13 @@ form .div-btns {
 
 .required-input {
     color: #f00;
+}
+
+#select2-select-container {
+    padding: 0 !important;
+}
+
+.select2-selection {
+    border: none !important;
+    background: #f0f4fc !important;
 }

@@ -6,6 +6,7 @@ use App\Http\Controllers\CreateUserController;
 use App\Http\Controllers\PagesController;
 use App\Http\Middleware\CheckLogged;
 use App\Http\Middleware\CheckNotLogged;
+use App\Http\Middleware\CheckPerfil;
 use Illuminate\Support\Facades\Route;
 
 // --- EXIBIÇÃO DE PÁGINAS --- //
@@ -33,24 +34,32 @@ use Illuminate\Support\Facades\Route;
             // EXIBIÇÃO DA PÁGNIA HOME...
             Route::get('/home', [PagesController::class, 'showHomePage']);
 
-            // EXIBIÇÃO DA PÁGINA DE USUÁRIOS...
-            Route::get('/users', [PagesController::class, 'showUsersPage']);
-
             // EXIBIÇÃO DA PÁGINA DE CRIAÇÃO DE SITE...
             Route::get('/create-site', [PagesController::class, 'showCreateSitePage']);
 
             // EXIBIÇÃO DA PÁGINA DE SITES...
             Route::get('/sites', [PagesController::class, 'showSitesPage']);
 
-            // EXIBIÇÃO DA PÁGINA DE CRIAÇÃO DE USUÁRIO...
-            Route::get('/create-user', [PagesController::class, 'showCreateUserPage']);
+
+            // VERIRICAÇÃO DO PERFIL DO USUÁRIO...
+            Route::middleware([CheckPerfil::class])->group(function() {
+
+                // EXIBIÇÕES...
+
+                    // EXIBIÇÃO DA PÁGINA DE USUÁRIOS...
+                    Route::get('/users', [PagesController::class, 'showUsersPage']);
+
+                    // EXIBIÇÃO DA PÁGINA DE CRIAÇÃO DE USUÁRIO...
+                    Route::get('/create-user', [PagesController::class, 'showCreateUserPage']);
 
 
-        // EXECUÇÕES...
+                // EXECUÇÕES...
 
-            // CRIAÇÃO DE USUÁRIO...
-            Route::post('/createUser', [CreateUserController::class, 'createUser']);
+                    // CRIAÇÃO DE USUÁRIO...
+                    Route::post('/createUser', [CreateUserController::class, 'createUser']);
+            });
 
+            
             // CRIAÇÃO DE SITE...
             Route::post('/createSite', [CreateSiteController::class, 'createSite']);
 

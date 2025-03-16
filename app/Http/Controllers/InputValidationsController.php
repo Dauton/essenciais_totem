@@ -37,6 +37,9 @@ class InputValidationsController extends Controller
                 'site_usuario' => [
                     'required',
                 ],
+                'perfil' => [
+                    'required',
+                ],
                 'senha' => [
                     'required',
                     'min: 12',

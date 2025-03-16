@@ -41,8 +41,8 @@
             <label for="site">
                 <p>Site<span class="required-input"> *</span></p>
                 <div>
-                    <i class="fa-solid fa-industry"></i>
-                    <select>
+                    <i class="fa-solid fa-building-user"></i>
+                    <select id="site" name="site">
                         <option value="">Selecione o site</option>
                         <option value="CDARCEX">CDARCEX</option>
                         <option value="CDAMBEX">CDAMBEX</option>
@@ -53,6 +53,22 @@
                     <p class="msg-input-erro">{{ $message }}</p>
                 @enderror
             </label>
+        </label>
+
+        <label for="perfil">
+            <p>Perfil<span class="required-input"> *</span></p>
+            <div>
+                <i class="fa-solid fa-user-shield"></i>
+                <select id="perfil" name="perfil">
+                    <option value="">Selecione o perfil</option>
+                    <option value="TI SITES">TI SITES</option>
+                    <option value="ADMIN">ADMIN</option>
+                </select>
+            </div>
+            @error('perfil')
+                <p class="msg-input-erro">{{ $message }}</p>
+            @enderror
+        </label>
 
             <label for="senha">
                 <p>Senha<span class="required-input"> *</span></p>
@@ -86,4 +102,5 @@
         </form>
 
     </section>
+
 @endsection

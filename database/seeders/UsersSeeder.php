@@ -19,6 +19,7 @@ class UsersSeeder extends Seeder
                 'usuario' => 'dpfelix',
                 'site_usuario' => 'CDARCEX',
                 'senha' => bcrypt('dpfelix'),
+                'perfil' => 'ADMIN',
                 'created_at' => date('Y-m-d H:i:s')
             ]
         );
