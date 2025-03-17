@@ -45,6 +45,10 @@ class InputValidationsController extends Controller
                     'min: 12',
                     'regex: /[0-9]/',
                     'regex: /[A-Z]/',
+                ],
+                'repete_senha' => [
+                    'required',
+                    'same:senha'
                 ]
             ],
             [
@@ -54,9 +58,13 @@ class InputValidationsController extends Controller
 
                 'site_usuario.required' => 'O site do usuário deve ser preenchido.',
 
+                'perfil.required' => 'O perfil do usuário deve ser preenchido.',
+
                 'senha.required' => 'A senha deve ser preenchida.',
                 'senha.min' => 'A senha deve possuir no mínimo :min caracteres.',
-                'senha.regex' => 'A senha deve possuir pelo menos um número e uma letra maiúscula.'
+                'senha.regex' => 'A senha deve possuir pelo menos um número e uma letra maiúscula.',
+
+                'repete_senha' => 'As senhas não conferem.'
             ]
         );
     }

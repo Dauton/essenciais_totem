@@ -16,6 +16,7 @@ class CreateUserController extends Controller
         $nome_usuario = $request->input('nome_usuario');
         $usuario = $request->input('usuario');
         $site_usuario = $request->input('site_usuario');
+        $perfil = $request->input('perfil');
         $senha = $request->input('senha');
 
         try {

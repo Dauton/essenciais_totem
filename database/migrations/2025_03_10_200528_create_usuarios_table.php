@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('nome_usuario', '100')->nullable();
             $table->string('usuario', '50')->nullable();
             $table->string('site_usuario', '50')->nullable();
+            $table->string('perfil', '50')->nullable();
             $table->string('senha', '200')->nullable();
             $table->string('last_login', '50')->nullable();
             $table->timestamps();

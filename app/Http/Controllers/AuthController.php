@@ -29,7 +29,7 @@ class AuthController extends Controller
             return $error;
         }
 
-        $user->last_login = date('d-m-Y H:i:s');
+        $user->last_login = date('Y-m-d H:i:s');
         $user->save();
 
         session([
