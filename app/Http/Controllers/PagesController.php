@@ -10,7 +10,10 @@ class PagesController extends Controller
 {
     public function showEssenciaisPage()
     {
-        return view('essenciais');
+        // Exibe todos os sites cadastrados em ordem alfabética por site...
+        $sites = Site::orderBy('site', 'asc')->get();
+
+        return view('essenciais',compact('sites'));
     }
 
     public function showSitePage()
@@ -32,7 +35,10 @@ class PagesController extends Controller
 
     public function showSitesPage()
     {
-        return view('sites');
+        // Exibe todos os sites cadastrados...
+        $sites = Site::all();
+
+        return view('sites', compact('sites'));
     }
 
     public function showUsersPage()

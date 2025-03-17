@@ -47,6 +47,10 @@
         <p class="alert-error">{{session('permissionError')}}</p>
     @endif
 
+    @if(session('alertSuccess'))
+        <p class="alert-success">{{ session('alertSuccess') }}</p>
+    @endif
+
 </body>
 
 </html>

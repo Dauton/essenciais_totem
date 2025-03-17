@@ -76,10 +76,10 @@ class InputValidationsController extends Controller
                 'site' => [
                     'required'
                 ],
-                'titulo_url01' => [
+                'titulo_url1' => [
                     'required'
                 ],
-                'url01' => [
+                'url1' => [
                     'required',
                     'url'
                 ]
@@ -87,9 +87,9 @@ class InputValidationsController extends Controller
             [
                 'site.required' => 'O nome do site deve ser informado.',
 
-                'titulo_url01.required' => 'Deve ser cadastrado pelo menos uma ferramenta.',
-                'url01.required' => 'Deve ser cadastrado pelo menos uma ferramenta.',
-                'url01.url' => 'A URL informada não é uma URL válida.'
+                'titulo_url1.required' => 'Deve ser cadastrado pelo menos uma ferramenta.',
+                'url1.required' => 'Deve ser cadastrado pelo menos uma ferramenta.',
+                'url1.url' => 'A URL informada não é uma URL válida.'
             ]
         );
     }

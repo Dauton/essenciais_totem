@@ -164,12 +164,17 @@ form .contents-cabecalho h2 {
     font-weight: bold;
 }
 
-.alert-error {
-    padding: 10px;
+.alert-error,
+.alert-success {
+    padding: 10px 15px;
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    top: 15px;
+    right: 15px;
     border-radius: 3px;
     background: #ff6666;
     color: #fff;
+}
+
+.alert-success {
+    background: #60cd60;
 }

@@ -22,30 +22,18 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>CDARCEX</td>
-                <td>
-                    <i class="fa-solid fa-square-pen" title="Editar unidade"></i>
-                    <i class="fa-solid fa-square-xmark" title="Excluir unidade"></i>
-                    <a href="/site" target="_blank"><i class="fa-solid fa-eye" title="Visitar unidade"></i></a>
-                </td>
-            </tr>
-            <tr>
-                <td>CDARCEX</td>
-                <td>
-                    <i class="fa-solid fa-square-pen" title="Editar unidade"></i>
-                    <i class="fa-solid fa-square-xmark" title="Excluir unidade"></i>
-                    <a href="/site" target="_blank"><i class="fa-solid fa-eye" title="Visitar unidade"></i></a>
-                </td>
-            </tr>
-            <tr>
-                <td>CDARCEX</td>
-                <td>
-                    <i class="fa-solid fa-square-pen" title="Editar unidade"></i>
-                    <i class="fa-solid fa-square-xmark" title="Excluir unidade"></i>
-                    <a href="/site" target="_blank"><i class="fa-solid fa-eye" title="Visitar unidade"></i></a>
-                </td>
-            </tr>
+            @foreach ($sites as $site)
+
+                <tr>
+                    <td>{{ $site->site }}</td>
+                    <td>
+                        <i class="fa-solid fa-square-pen" title="Editar unidade"></i>
+                        <i class="fa-solid fa-square-xmark" title="Excluir unidade"></i>
+                        <a href="/site" target="_blank"><i class="fa-solid fa-eye" title="Visitar unidade"></i></a>
+                    </td>
+                </tr>
+
+            @endforeach
         </tbody>
     </table>
 
