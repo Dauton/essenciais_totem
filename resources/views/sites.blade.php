@@ -29,7 +29,7 @@
                     <td>
                         <a href="/editSite/{{ Crypt::encrypt($site->id) }}"><i class="fa-solid fa-square-pen" title="Editar unidade"></i></a>
                         <a href="/deleteSite/{{ Crypt::encrypt($site->id) }}"><i class="fa-solid fa-square-xmark" title="Excluir unidade"></i></a>
-                        <a href="/site/{{ Crypt::encrypt($site->id) }}" target="_blank"><i class="fa-solid fa-eye" title="Visitar unidade"></i></a>
+                        <a href="/site/{{ $site->site }}" target="_blank"><i class="fa-solid fa-eye" title="Visitar unidade"></i></a>
                     </td>
                 </tr>
 

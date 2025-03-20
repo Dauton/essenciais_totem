@@ -18,9 +18,10 @@ class PagesController extends Controller
         return view('essenciais',compact('sites'));
     }
 
-    public function showSitePage()
+    public function showSitePage($site)
     {
-        return view('/site');
+        $visualizer = Site::all()->where('site', $site)->first();
+        return view('site', compact('visualizer'));
     }
 
     public function showLoginPage()
@@ -60,6 +61,9 @@ class PagesController extends Controller
         } catch (DecryptException $e) {
             return redirect('/users')->with('alertError', 'Erro ao tentar editar usuário.');
         }
+
+        $visualizer = User::where('id', $id)->first();
+        return view('edit-user', compact('visualizer'));
 
     }
 

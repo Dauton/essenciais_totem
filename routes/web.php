@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CreateSiteController;
 use App\Http\Controllers\CreateUserController;
+use App\Http\Controllers\EditController;
 use App\Http\Controllers\PagesController;
 use App\Http\Middleware\CheckLogged;
 use App\Http\Middleware\CheckNotLogged;
@@ -16,12 +17,7 @@ use Illuminate\Support\Facades\Route;
     Route::get('/', [PagesController::class, 'showEssenciaisPage']);
 
     // EXIBIÇÃO DA PÁGINA DE SITE...
-    Route::get('/site', [PagesController::class, 'showSitePage']);
-
-
-
-// --- AUTENTICAÇÃO --- //
-
+    Route::get('/site/{site}', [PagesController::class, 'showSitePage']);
 
 
 // --- MIDDLEWARES --- //
@@ -62,6 +58,9 @@ use Illuminate\Support\Facades\Route;
 
                     // EXECUÇÃO DA PÁGINA DE EXCLUSÃO DE USUÁRIO...
                     Route::get('/deleteUser/{id}', [PagesController::class, 'DeleteUserPage'])->name('deleteUser');
+
+                    // EXECUSAÃO DA EDIÇÃO DO USUÁRIO...
+                    Route::post('/editUser', [EditController::class, 'editUser'])->name('editUser');
 
                 // EXECUÇÕES...
 

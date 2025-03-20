@@ -21,7 +21,7 @@
             @foreach ($sites as $site)
                 <tr>
                     <td>{{ $site->site }}</td>
-                    <td><a href="/site"><i class="fa-solid fa-eye" title="Visitar unidade"></i></a></td>
+                    <td><a href="/site/{{$site->site}}"><i class="fa-solid fa-eye" title="Visitar unidade"></i></a></td>
                 </tr>
             @endforeach
         </tbody>
