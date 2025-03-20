@@ -27,9 +27,9 @@
                 <tr>
                     <td>{{ $site->site }}</td>
                     <td>
-                        <i class="fa-solid fa-square-pen" title="Editar unidade"></i>
-                        <i class="fa-solid fa-square-xmark" title="Excluir unidade"></i>
-                        <a href="/site" target="_blank"><i class="fa-solid fa-eye" title="Visitar unidade"></i></a>
+                        <a href="/editSite/{{ Crypt::encrypt($site->id) }}"><i class="fa-solid fa-square-pen" title="Editar unidade"></i></a>
+                        <a href="/deleteSite/{{ Crypt::encrypt($site->id) }}"><i class="fa-solid fa-square-xmark" title="Excluir unidade"></i></a>
+                        <a href="/site/{{ Crypt::encrypt($site->id) }}" target="_blank"><i class="fa-solid fa-eye" title="Visitar unidade"></i></a>
                     </td>
                 </tr>
 
@@ -37,6 +37,6 @@
         </tbody>
     </table>
 
-</section>
+    @endsection
 
-@endsection
+</section>

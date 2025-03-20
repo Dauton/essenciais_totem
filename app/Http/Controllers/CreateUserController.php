@@ -19,11 +19,17 @@ class CreateUserController extends Controller
         $perfil = $request->input('perfil');
         $senha = $request->input('senha');
 
-        try {
-            DB::connection()->getPdo();
-            echo "Conexão bem sucessida!";
-        } catch(PDOException $e) {
-            echo "Erro na conexão: " . $e->getMessage();
-        }
+        DB::table('users')->insert(
+            [
+                'nome_usuario' => $nome_usuario,
+                'usuario' => $usuario,
+                'site_usuario' => $site_usuario,
+                'perfil' => $perfil,
+                'senha' => password_hash($senha, PASSWORD_ARGON2ID)
+            ]
+        );
+
+        return redirect('/users')->with('alertSuccess', 'Usuário criado com sucesso.');
+
     }
 }

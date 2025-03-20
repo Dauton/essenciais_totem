@@ -10,6 +10,9 @@
 
     <h2>Meu site</h2>
 
+    @if($site === null)
+    <p>Site não cadastrado</p>
+    @else
     <form method="post" action="/createSite">
         @csrf
 
@@ -338,6 +341,7 @@
         </div>
 
     </form>
+    @endif
 
     @endsection
 

@@ -1,5 +1,6 @@
 @extends('layouts.admin-layout')
 @section('content')
+
     <header class="contents-cabecalho">
         <h2>Sites</h2>
         <i class="fa-solid fa-industry"></i>
@@ -22,7 +23,7 @@
                     <p>Qual o site?<span class="required-input"> *</span></p>
                     <div>
                         <i class="fa-solid fa-industry"></i>
-                        <input type="text" name="site" id="site" placeholder="Nome do site"
+                        <input type="text" name="site" id="site" placeholder="Ex: CDARCEX"
                             value="{{ old('site') }}">
                     </div>
                     @error('site')

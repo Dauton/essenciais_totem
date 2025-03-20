@@ -2,11 +2,12 @@
 
 namespace App\Http\Middleware;
 
+use App\Models\Site;
 use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class CheckPerfil
+class CheckUserSiteHomePage
 {
     /**
      * Handle an incoming request.
@@ -16,9 +17,10 @@ class CheckPerfil
     public function handle(Request $request, Closure $next): Response
     {
 
-        if(session('user.perfil') != 'ADMIN') {
+        // SE NÃO HOUVER UM SITE CADASTRADO PARA O USUÁRIO, REDIRECIONA PARA A PÁGINA DE CADASTRO DE SITES...
+        if(Site::where('site', session('user.site_usuario'))->count() == null) {
 
-            return redirect()->back()->with('alertError', 'Você não tem pemissão para acessar essa página.');
+            return redirect('/sites')->with('alertInfo', 'Cadastre seu site na ferramenta.');
 
         }
 

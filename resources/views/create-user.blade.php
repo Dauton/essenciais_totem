@@ -1,5 +1,6 @@
 @extends('layouts.admin-layout')
 @section('content')
+
 <header class="contents-cabecalho">
     <h2>Usuários</h2>
     <i class="fa-solid fa-industry"></i>
@@ -73,7 +74,7 @@
             <p>Senha<span class="required-input"> *</span></p>
             <div>
                 <i class="fa-solid fa-lock"></i>
-                <input type="text" name="senha" id="senha" placeholder="Senha de acesso"
+                <input type="password" name="senha" id="senha" placeholder="Senha de acesso"
                     value="{{ old('senha') }}">
             </div>
             @error('senha')
@@ -85,7 +86,7 @@
             <p>Repita a senha<span class="required-input"> *</span></p>
             <div>
                 <i class="fa-solid fa-lock"></i>
-                <input type="text" name="repete_senha" id="repete_senha" placeholder="Repita a senha de acesso"
+                <input type="password" name="repete_senha" id="repete_senha" placeholder="Repita a senha de acesso"
                     value="{{ old('repete_senha') }}">
             </div>
             @error('repete_senha')
@@ -100,6 +101,6 @@
 
     </form>
 
-</section>
+    @endsection
 
-@endsection
+</section>

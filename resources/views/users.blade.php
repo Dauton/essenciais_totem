@@ -24,17 +24,20 @@
             </tr>
         </thead>
         <tbody>
+            @foreach ($users as $user)
             <tr>
-                <td>DAUTON PEREIRA FÉLIX</td>
-                <td>DPFELIX</td>
-                <td>CDARCEX</td>
+                <td>{{$user->nome_usuario}}</td>
+                <td>{{$user->usuario}}</td>
+                <td>{{$user->site_usuario}}</td>
                 <td>
-                    <i class="fa-solid fa-square-pen" title="Editar usuário"></i>
-                    <i class="fa-solid fa-square-xmark" title="Excluir usuário"></i>
+                    <a href="/editUser/{{Crypt::encrypt($user->id)}}"><i class="fa-solid fa-square-pen" title="Editar usuário"></i></a>
+                    <a href="/deleteUser/{{Crypt::encrypt($user->id)}}"><i class="fa-solid fa-square-xmark" title="Excluir usuário"></i></a>
                 </td>
             </tr>
+            @endforeach
         </tbody>
     </table>
-</section>
 
-@endsection
+    @endsection
+
+</section>
