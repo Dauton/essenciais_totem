@@ -20,6 +20,13 @@ class PagesController extends Controller
 
     public function showSitePage($site)
     {
+
+        try {
+            $site = Crypt::decrypt($site);
+        } catch (DecryptException $e) {
+            return redirect('/')->with('alertError', 'Erro ao tentar acessar site.');
+        }
+
         $visualizer = Site::all()->where('site', $site)->first();
         return view('site', compact('visualizer'));
     }
@@ -98,6 +105,10 @@ class PagesController extends Controller
         } catch (DecryptException $th) {
             return redirect('/sites')->with('alertError', 'Erro ao tentar editar site.');
         }
+
+        $visualizer = Site::where('id', $id)->first();
+        return view('edit-site', compact('visualizer'));
+
     }
 
     public function deleteSitePage($id)

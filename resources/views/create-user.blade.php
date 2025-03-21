@@ -10,7 +10,7 @@
 
     <h2>Cadastrar um novo usuário</h2>
 
-    <form method="post" action="/createUser" id="form-user-page">
+    <form method="post" action="/createUser" id="form-user-page" autocomplete="off">
         @csrf
         <header class="contents-cabecalho">
             <h2>Dados do usuário</h2>
@@ -75,7 +75,7 @@
             <div>
                 <i class="fa-solid fa-lock"></i>
                 <input type="password" name="senha" id="senha" placeholder="Senha de acesso"
-                    value="{{ old('senha') }}">
+                    value="{{ old('senha') }}" autocomplete="new-password">
             </div>
             @error('senha')
             <p class="msg-input-erro">{{ $message }}</p>

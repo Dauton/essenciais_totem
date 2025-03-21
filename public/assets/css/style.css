@@ -76,7 +76,7 @@ body {
 }
 
 .links-container {
-    width: 460px;
+    width: 645px;
     margin: 0 auto;
     position: absolute;
     top: 50%;
@@ -87,7 +87,7 @@ body {
     align-items: center;
     border-radius: 4px;
     box-shadow: 0 0 .3em #cdcdcd;
-    background: #f1f1f1;
+    background: #f1f1f6;
 }
 .links-container .contents-cabecalho {
     justify-content: center;
@@ -108,7 +108,7 @@ form .contents-cabecalho h2 {
 }
 
 .link-box {
-    width: 130px;
+    width: 140px;
     padding: 15px;
     display: flex;
     flex-direction: column;
@@ -117,7 +117,7 @@ form .contents-cabecalho h2 {
     border-radius: 3px;
     background: var(--primary-color);
     color: #fff;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 100;
     cursor: pointer;
 }
