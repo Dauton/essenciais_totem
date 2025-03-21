@@ -25,7 +25,7 @@
                 <div>
                     <i class="fa-solid fa-industry"></i>
                     <input type="text" name="site" id="site" placeholder="Nome do site"
-                        value="{{ $site->site }}">
+                        value="{{ $site->site }}" readonly  >
                 </div>
                 @error('site')
                     <p class="msg-input-erro">{{ $message }}</p>
@@ -41,8 +41,8 @@
                 <p>Título URL 01<span class="required-input"> *</span></p>
                 <div>
                     <i class="fa-solid fa-file-pen"></i>
-                    <input type="text" name="titulo_url1" id="titulo_url1" placeholder="Título da ferramenta 01"
-                        value="{{ $site->titulo_url1 }}">
+                    <input type="text" name="titulo_url1" id="titulo_url1" placeholder="Nenhum registro"
+                        value="{{ $site->titulo_url1 }}" readonly>
                 </div>
                 @error('titulo_url01')
                     <p class="msg-input-erro">{{ $message }}</p>
@@ -50,8 +50,8 @@
                 <p>URL 01<span class="required-input"> *</span></p>
                 <div>
                     <i class="fa-solid fa-link"></i>
-                    <input type="text" name="url01" id="url01" placeholder="URL da ferramenta 01"
-                        value="{{ $site->url1 }}">
+                    <input type="text" name="url01" id="url01" placeholder="Nenhum registro"
+                        value="{{ $site->url1 }}" readonly>
                 </div>
                 @error('url01')
                     <p class="msg-input-erro">{{ $message }}</p>
@@ -67,8 +67,8 @@
                 Título URL 02
                 <div>
                     <i class="fa-solid fa-file-pen"></i>
-                    <input type="text" name="titulo_url02" id="titulo_url02" placeholder="Título da ferramenta 02"
-                        value="{{ old('titulo_url02') }}">
+                    <input type="text" name="titulo_url02" id="titulo_url02" placeholder="Nenhum registro"
+                        value="{{ $site->titulo_url2 }}" readonly>
                 </div>
                 @error('titulo_url02')
                     <p class="msg-input-erro">{{ $message }}</p>
@@ -76,8 +76,8 @@
                 URL 02
                 <div>
                     <i class="fa-solid fa-link"></i>
-                    <input type="text" name="url02" id="url02" placeholder="URL da ferramenta 02"
-                        value="{{ old('url02') }}">
+                    <input type="text" name="url02" id="url02" placeholder="Nenhum registro"
+                        value="{{ $site->url2 }}" readonly>
                 </div>
                 @error('url02')
                     <p class="msg-input-erro">{{ $message }}</p>
@@ -92,8 +92,8 @@
                 Título URL 03
                 <div>
                     <i class="fa-solid fa-file-pen"></i>
-                    <input type="text" name="titulo_url03" id="titulo_url03" placeholder="Título da ferramenta 03"
-                        value="{{ old('titulo_url03') }}">
+                    <input type="text" name="titulo_url03" id="titulo_url03" placeholder="Nenhum registro"
+                        value="{{ $site->titulo_url3 }}" readonly>
                 </div>
                 @error('titulo_url03')
                     <p class="msg-input-erro">{{ $message }}</p>
@@ -101,8 +101,8 @@
                 URL 03
                 <div>
                     <i class="fa-solid fa-link"></i>
-                    <input type="text" name="url03" id="url03" placeholder="URL da ferramenta 03"
-                        value="{{ old('url03') }}">
+                    <input type="text" name="url03" id="url03" placeholder="Nenhum registro"
+                        value="{{ $site->url3 }}" readonly>
                 </div>
                 @error('url03')
                     <p class="msg-input-erro">{{ $message }}</p>
@@ -117,8 +117,8 @@
                 Título URL 04
                 <div>
                     <i class="fa-solid fa-file-pen"></i>
-                    <input type="text" name="titulo_url04" id="titulo_url04" placeholder="Título da ferramenta 04"
-                        value="{{ old('titulo_url04') }}">
+                    <input type="text" name="titulo_url04" id="titulo_url04" placeholder="Nenhum registro"
+                        value="{{ $site->titulo_url4 }}" readonly>
                 </div>
                 @error('titulo_url04')
                     <p class="msg-input-erro">{{ $message }}</p>
@@ -126,8 +126,8 @@
                 URL 01
                 <div>
                     <i class="fa-solid fa-link"></i>
-                    <input type="text" name="url04" id="url04" placeholder="URL da ferramenta 04"
-                        value="{{ old('url04') }}">
+                    <input type="text" name="url04" id="url04" placeholder="Nenhum registro"
+                        value="{{ $site->url4 }}" readonly>
                 </div>
                 @error('url04')
                     <p class="msg-input-erro">{{ $message }}</p>
@@ -142,8 +142,8 @@
                 Título URL 05
                 <div>
                     <i class="fa-solid fa-file-pen"></i>
-                    <input type="text" name="titulo_url05" id="titulo_url05" placeholder="Título da ferramenta 05"
-                        value="{{ old('titulo_url05') }}">
+                    <input type="text" name="titulo_url05" id="titulo_url05" placeholder="Nenhum registro"
+                        value="{{ $site->titulo_url5 }}" readonly>
                 </div>
                 @error('titulo_url05')
                     <p class="msg-input-erro">{{ $message }}</p>
@@ -151,8 +151,8 @@
                 URL 05
                 <div>
                     <i class="fa-solid fa-link"></i>
-                    <input type="text" name="url05" id="url05" placeholder="URL da ferramenta 05"
-                        value="{{ old('url05') }}">
+                    <input type="text" name="url05" id="url05" placeholder="Nenhum registro"
+                        value="{{ $site->url5 }}" readonly>
                 </div>
                 @error('url05')
                     <p class="msg-input-erro">{{ $message }}</p>
@@ -167,8 +167,8 @@
                 Título URL 06
                 <div>
                     <i class="fa-solid fa-file-pen"></i>
-                    <input type="text" name="titulo_url06" id="titulo_url06" placeholder="Título da ferramenta 06"
-                        value="{{ old('titulo_url06') }}">
+                    <input type="text" name="titulo_url06" id="titulo_url06" placeholder="Nenhum registro"
+                        value="{{ $site->titulo_url6 }}" readonly>
                 </div>
                 @error('titulo_url06')
                     <p class="msg-input-erro">{{ $message }}</p>
@@ -176,8 +176,8 @@
                 URL 06
                 <div>
                     <i class="fa-solid fa-link"></i>
-                    <input type="text" name="url06" id="url06" placeholder="URL da ferramenta 06"
-                        value="{{ old('url06') }}">
+                    <input type="text" name="url06" id="url06" placeholder="Nenhum registro"
+                        value="{{ $site->url6 }}" readonly>
                 </div>
                 @error('url06')
                     <p class="msg-input-erro">{{ $message }}</p>
@@ -192,8 +192,8 @@
                 Título URL 07
                 <div>
                     <i class="fa-solid fa-file-pen"></i>
-                    <input type="text" name="titulo_url07" id="titulo_url07" placeholder="Título da ferramenta 07"
-                        value="{{ old('titulo_url07') }}">
+                    <input type="text" name="titulo_url07" id="titulo_url07" placeholder="Nenhum registro"
+                        value="{{ $site->titulo_url7 }}" readonly>
                 </div>
                 @error('titulo_url07')
                     <p class="msg-input-erro">{{ $message }}</p>
@@ -201,8 +201,8 @@
                 URL 07
                 <div>
                     <i class="fa-solid fa-link"></i>
-                    <input type="text" name="url07" id="url07" placeholder="URL da ferramenta 07"
-                        value="{{ old('url07') }}">
+                    <input type="text" name="url07" id="url07" placeholder="Nenhum registro"
+                        value="{{ $site->url7 }}" readonly>
                 </div>
                 @error('url07')
                     <p class="msg-input-erro">{{ $message }}</p>
@@ -217,8 +217,8 @@
                 Título URL 08
                 <div>
                     <i class="fa-solid fa-file-pen"></i>
-                    <input type="text" name="titulo_url08" id="titulo_url08" placeholder="Título da ferramenta 08"
-                        value="{{ old('titulo_url08') }}">
+                    <input type="text" name="titulo_url08" id="titulo_url08" placeholder="Nenhum registro"
+                        value="{{ $site->titulo_url8 }}" readonly>
                 </div>
                 @error('titulo_url08')
                     <p class="msg-input-erro">{{ $message }}</p>
@@ -226,8 +226,8 @@
                 URL 08
                 <div>
                     <i class="fa-solid fa-link"></i>
-                    <input type="text" name="url08" id="url08" placeholder="URL da ferramenta 08"
-                        value="{{ old('url08') }}">
+                    <input type="text" name="url08" id="url08" placeholder="Nenhum registro"
+                        value="{{ $site->url8 }}" readonly>
                 </div>
                 @error('url08')
                     <p class="msg-input-erro">{{ $message }}</p>
@@ -242,8 +242,8 @@
                 Título URL 09
                 <div>
                     <i class="fa-solid fa-file-pen"></i>
-                    <input type="text" name="titulo_url09" id="titulo_url09" placeholder="Título da ferramenta 09"
-                        value="{{ old('titulo_url09') }}">
+                    <input type="text" name="titulo_url09" id="titulo_url09" placeholder="Nenhum registro"
+                        value="{{ $site->titulo_url9 }}" readonly>
                 </div>
                 @error('titulo_url09')
                     <p class="msg-input-erro">{{ $message }}</p>
@@ -251,8 +251,8 @@
                 URL 09
                 <div>
                     <i class="fa-solid fa-link"></i>
-                    <input type="text" name="url09" id="url09" placeholder="URL da ferramenta 09"
-                        value="{{ old('url09') }}">
+                    <input type="text" name="url09" id="url09" placeholder="Nenhum registro"
+                        value="{{ $site->url9 }}" readonly>
                 </div>
                 @error('url09')
                     <p class="msg-input-erro">{{ $message }}</p>
@@ -267,8 +267,8 @@
                 Título URL 10
                 <div>
                     <i class="fa-solid fa-file-pen"></i>
-                    <input type="text" name="titulo_url10" id="titulo_url10" placeholder="Título da ferramenta 10"
-                        value="{{ old('titulo_url10') }}">
+                    <input type="text" name="titulo_url10" id="titulo_url10" placeholder="Nenhum registro"
+                        value="{{ $site->titulo_url10 }}" readonly>
                 </div>
                 @error('titulo_url10')
                     <p class="msg-input-erro">{{ $message }}</p>
@@ -276,8 +276,8 @@
                 URL 10
                 <div>
                     <i class="fa-solid fa-link"></i>
-                    <input type="text" name="url10" id="url10" placeholder="URL da ferramenta 10"
-                        value="{{ old('url10') }}">
+                    <input type="text" name="url10" id="url10" placeholder="Nenhum registro"
+                        value="{{ $site->url10 }}" readonly>
                 </div>
                 @error('url10')
                     <p class="msg-input-erro">{{ $message }}</p>
@@ -292,8 +292,8 @@
                 Título URL 11
                 <div>
                     <i class="fa-solid fa-file-pen"></i>
-                    <input type="text" name="titulo_url11" id="titulo_url11" placeholder="Título da ferramenta 11"
-                        value="{{ old('titulo_url11') }}">
+                    <input type="text" name="titulo_url11" id="titulo_url11" placeholder="Nenhum registro"
+                        value="{{ $site->titulo_url11 }}" readonly>
                 </div>
                 @error('titulo_url11')
                     <p class="msg-input-erro">{{ $message }}</p>
@@ -301,8 +301,8 @@
                 URL 11
                 <div>
                     <i class="fa-solid fa-link"></i>
-                    <input type="text" name="url11" id="url11" placeholder="URL da ferramenta 11"
-                        value="{{ old('url11') }}">
+                    <input type="text" name="url11" id="url11" placeholder="Nenhum registro"
+                        value="{{ $site->url11 }}" readonly>
                 </div>
                 @error('url11')
                     <p class="msg-input-erro">{{ $message }}</p>
@@ -317,8 +317,8 @@
                 Título URL 12
                 <div>
                     <i class="fa-solid fa-file-pen"></i>
-                    <input type="text" name="titulo_url12" id="titulo_url12" placeholder="Título da ferramenta 12"
-                        value="{{ old('titulo_url12') }}">
+                    <input type="text" name="titulo_url12" id="titulo_url12" placeholder="Nenhum registro"
+                        value="{{ $site->titulo_url12 }}" readonly>
                 </div>
                 @error('titulo_url12')
                     <p class="msg-input-erro">{{ $message }}</p>
@@ -326,18 +326,13 @@
                 URL 12
                 <div>
                     <i class="fa-solid fa-link"></i>
-                    <input type="text" name="url12" id="url12" placeholder="URL da ferramenta 12"
-                        value="{{ old('url12') }}">
+                    <input type="text" name="url12" id="url12" placeholder="Nenhum registro"
+                        value="{{ $site->url12 }}" readonly>
                 </div>
                 @error('url12')
                     <p class="msg-input-erro">{{ $message }}</p>
                 @enderror
             </label>
-        </div>
-
-        <div class="div-btns">
-            <button type="submit">Submeter</button>
-            <a href="/sites"><button type="button" id="btn-cancelar">Cancelar</button></a>
         </div>
 
     </form>

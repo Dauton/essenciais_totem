@@ -70,30 +70,6 @@
             @enderror
         </label>
 
-        <label for="senha">
-            <p>Senha<span class="required-input"> *</span></p>
-            <div>
-                <i class="fa-solid fa-lock"></i>
-                <input type="password" name="senha" id="senha" placeholder="Senha de acesso"
-                    value="">
-            </div>
-            @error('senha')
-            <p class="msg-input-erro">{{ $message }}</p>
-            @enderror
-        </label>
-
-        <label for="repete_senha">
-            <p>Repita a senha<span class="required-input"> *</span></p>
-            <div>
-                <i class="fa-solid fa-lock"></i>
-                <input type="password" name="repete_senha" id="repete_senha" placeholder="Repita a senha de acesso"
-                    value="">
-            </div>
-            @error('repete_senha')
-            <p class="msg-input-erro">{{ $message }}</p>
-            @enderror
-        </label>
-
         <input type="hidden" name="id" value="{{ $visualizer->id }}">
 
         <div class="div-btns">

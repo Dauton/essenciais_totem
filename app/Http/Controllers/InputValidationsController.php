@@ -24,7 +24,7 @@ class InputValidationsController extends Controller
         );
     }
 
-    public static function validationUser(Request $request)
+    public static function validationCreateUser(Request $request)
     {
         $request->validate(
             [
@@ -65,6 +65,35 @@ class InputValidationsController extends Controller
                 'senha.regex' => 'A senha deve possuir pelo menos um número e uma letra maiúscula.',
 
                 'repete_senha' => 'As senhas não conferem.'
+            ]
+        );
+    }
+
+    public static function validationEditUser(Request $request)
+    {
+        $request->validate(
+            [
+                'nome_usuario' => [
+                    'required',
+                ],
+                'usuario' => [
+                    'required',
+                ],
+                'site_usuario' => [
+                    'required',
+                ],
+                'perfil' => [
+                    'required',
+                ]
+            ],
+            [
+                'nome_usuario.required' => 'O nome do usuário deve ser preenchido.',
+
+                'usuario.required' => 'O usuário de acesso deve ser preenchido.',
+
+                'site_usuario.required' => 'O site do usuário deve ser preenchido.',
+
+                'perfil.required' => 'O perfil do usuário deve ser preenchido.',
             ]
         );
     }

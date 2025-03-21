@@ -12,22 +12,20 @@ class EditController extends Controller
 {
     public function editUser(Request $request)
     {
-        InputValidationsController::validationUser($request);
+        InputValidationsController::validationEditUser($request);
 
         $id = $request->input('id');
         $nome_usuario = $request->input('nome_usuario');
         $usuario = $request->input('usuario');
         $site_usuario = $request->input('site_usuario');
         $perfil = $request->input('perfil');
-        $senha = $request->input('senha');
 
         User::where('id', $id)->update(
             [
                 'nome_usuario' => $nome_usuario,
                 'usuario' => $usuario,
                 'site_usuario' => $site_usuario,
-                'perfil' => $perfil,
-                'senha' => password_hash($senha, PASSWORD_ARGON2ID)
+                'perfil' => $perfil
             ]
         );
 
