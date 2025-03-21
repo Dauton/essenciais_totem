@@ -145,5 +145,8 @@
                 <i class="fa-solid fa-rotate-right"></i>
             </button>
         </a>
+        <button type="button" id="fullscreen" title="Fullscreen">
+            <i class="fa-solid fa-expand"></i>
+        </button>
     </div>
 @endsection

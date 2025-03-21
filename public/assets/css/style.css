@@ -54,13 +54,13 @@ body {
     align-items: center;
     background: var(--primary-color);
     color: #fff;
-    font-size: 14px;
+    font-size: 17px;
 }
 .contents-cabecalho h2 {
     font-weight: 100;
 }
 .contents-cabecalho i {
-    font-size: 18px;
+    font-size: 25px;
 }
 
 .conteudo {
@@ -76,7 +76,7 @@ body {
 }
 
 .links-container {
-    width: 645px;
+    width: 775px;
     margin: 0 auto;
     position: absolute;
     top: 50%;
@@ -100,7 +100,7 @@ form .contents-cabecalho h2 {
 .links-boxs {
     width: 100%;
     height: 100%;
-    padding: 20px;
+    padding: 25px;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -108,7 +108,7 @@ form .contents-cabecalho h2 {
 }
 
 .link-box {
-    width: 140px;
+    width: 170px;
     padding: 15px;
     display: flex;
     flex-direction: column;
@@ -117,7 +117,7 @@ form .contents-cabecalho h2 {
     border-radius: 3px;
     background: var(--primary-color);
     color: #fff;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 100;
     cursor: pointer;
 }
@@ -127,7 +127,7 @@ form .contents-cabecalho h2 {
 }
 
 .link-box i {
-    font-size: 30px;
+    font-size: 50px;
 }
 
 .floating-buttons {
@@ -140,8 +140,10 @@ form .contents-cabecalho h2 {
 }
 
 .floating-buttons button {
+    width: 50px;
+    height: 50px;
     padding: 7px;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 .rodape {
