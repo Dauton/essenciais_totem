@@ -39,9 +39,6 @@ use Illuminate\Support\Facades\Route;
             // EXIBIÇÃO DA PÁGINA DE EDIÇÃO DE SITE...
             Route::get('/editSite/{id}', [PagesController::class, 'showEditSitePage'])->name('editSite');
 
-            // EXECUÇÃO DA EXCLUSÃO DO SITE...
-            Route::get('/deleteSite/{id}', [PagesController::class, 'deleteSitePage'])->name('deleteSite');
-
             // EXECUSÃO DA EDIÇÃO DO SITE...
             Route::post('/editSite{id}', [EditController::class, 'editSite'])->name('editSite');
 
@@ -64,6 +61,9 @@ use Illuminate\Support\Facades\Route;
 
                     // EXECUSÃO DA EDIÇÃO DO USUÁRIO...
                     Route::post('/editUser', [EditController::class, 'editUser'])->name('editUser');
+
+                    // EXECUÇÃO DA EXCLUSÃO DO SITE...
+                    Route::get('/deleteSite/{id}', [PagesController::class, 'deleteSitePage'])->name('deleteSite');
 
                 // EXECUÇÕES...
 

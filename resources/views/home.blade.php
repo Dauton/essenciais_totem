@@ -38,7 +38,7 @@
                 <h2>Ferramenta 01</h2>
             </header>
             <label for="titulo_url1">
-                <p>Título URL 01<span class="required-input"> *</span></p>
+                <p>Título URL 01
                 <div>
                     <i class="fa-solid fa-file-pen"></i>
                     <input type="text" name="titulo_url1" id="titulo_url1" placeholder="Nenhum registro"
@@ -47,7 +47,7 @@
                 @error('titulo_url01')
                     <p class="msg-input-erro">{{ $message }}</p>
                 @enderror
-                <p>URL 01<span class="required-input"> *</span></p>
+                <p>URL 01
                 <div>
                     <i class="fa-solid fa-link"></i>
                     <input type="text" name="url01" id="url01" placeholder="Nenhum registro"

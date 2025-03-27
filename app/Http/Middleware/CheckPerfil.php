@@ -18,7 +18,7 @@ class CheckPerfil
 
         if(session('user.perfil') != 'ADMIN') {
 
-            return redirect()->back()->with('alertError', 'Você não tem pemissão para acessar essa página.');
+            return redirect()->back()->with('alertError', 'Você não tem permissão para acessar essa página ou realizar essa ação.');
 
         }
 

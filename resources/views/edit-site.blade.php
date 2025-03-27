@@ -1,6 +1,5 @@
 @extends('layouts.admin-layout')
 @section('content')
-
     <header class="contents-cabecalho">
         <h2>Sites</h2>
         <i class="fa-solid fa-industry"></i>
