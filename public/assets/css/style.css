@@ -42,7 +42,7 @@ body {
     border-radius: 5px;
     box-shadow: 0 0 .3em #cdcdcd;
     background: #fff;
-    overflow: scroll;
+    overflow: auto;
 }
 
 .contents-cabecalho {
@@ -65,10 +65,11 @@ body {
 
 .conteudo {
     width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
-    padding: 30px;
+    justify-content: baseline;
+    padding: 30px 30px 0 30px;
+    background: #fff;
 }
 .conteudo h2 {
     margin: 0 0 20px 0;
@@ -148,6 +149,8 @@ form .contents-cabecalho h2 {
 
 .rodape {
     width: 100%;
+    position: relative;
+    margin-top: auto;
     padding: 10px;
     text-align: center;
     font-size: 10px;

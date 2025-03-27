@@ -14,6 +14,11 @@
             </div>
             @error('site')
                 <p class="msg-input-erro">{{ $message }}</p>
+                <style>
+                    #site {
+                        border: 1px solid red;
+                    }
+                </style>
             @enderror
         </label>
     </div>
@@ -31,6 +36,11 @@
             </div>
             @error('titulo_url1')
                 <p class="msg-input-erro">{{ $message }}</p>
+                <style>
+                    #titulo_url1 {
+                        border: 1px solid red;
+                    }
+                </style>
             @enderror
             <p>URL 1<span class="required-input"> *</span></p>
             <div>
@@ -40,6 +50,11 @@
             </div>
             @error('url1')
                 <p class="msg-input-erro">{{ $message }}</p>
+                <style>
+                    #url1 {
+                        border: 1px solid red;
+                    }
+                </style>
             @enderror
         </label>
     </div>

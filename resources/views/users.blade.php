@@ -3,16 +3,14 @@
 
 <header class="contents-cabecalho">
     <h2>Usuários</h2>
-    <i class="fa-solid fa-users"></i>
+    <i class="fa-solid fa-users-gear"></i>
 </header>
 
 <section class="conteudo">
 
     <h2>Gerenciamento de usuários cadastrados</h2>
 
-    <a href="/create-user"><button>Cadastrar novo</button></a>
-    <br>
-    <br>
+    <a href="/create-user"><button>Cadastrar novo</button></a><br>
 
     <table>
         <thead>
@@ -38,6 +36,6 @@
         </tbody>
     </table>
 
-    @endsection
-
 </section>
+
+@endsection

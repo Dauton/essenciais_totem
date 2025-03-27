@@ -338,6 +338,6 @@
     </form>
     @endif
 
-    @endsection
-
 </section>
+
+@endsection

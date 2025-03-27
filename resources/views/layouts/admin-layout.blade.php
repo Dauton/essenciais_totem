@@ -1,5 +1,4 @@
-@extends('layouts.head-layout')
-@section('head')
+@include('layouts.head-layout')
 
 <body>
 
@@ -32,14 +31,12 @@
             </ul>
 
         </nav>
-
         <section class="centro">
 
             @yield('content')
+            @include('footer')
 
         </section>
-
-        @include('footer')
 
     </main>
 
@@ -58,5 +55,3 @@
 </body>
 
 </html>
-
-@endsection

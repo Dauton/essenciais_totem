@@ -21,10 +21,10 @@ class CreateUserController extends Controller
 
         DB::table('users')->insert(
             [
-                'nome_usuario' => $nome_usuario,
-                'usuario' => $usuario,
-                'site_usuario' => $site_usuario,
-                'perfil' => $perfil,
+                'nome_usuario' => trim(mb_strtoupper($nome_usuario)),
+                'usuario' => trim(mb_strtoupper($usuario)),
+                'site_usuario' => trim(mb_strtoupper($site_usuario)),
+                'perfil' => trim(mb_strtoupper($perfil)),
                 'senha' => password_hash($senha, PASSWORD_ARGON2ID)
             ]
         );

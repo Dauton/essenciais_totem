@@ -14,6 +14,6 @@
 
         @include('form-edit-site')
 
-        @endsection
-
     </section>
+
+    @endsection

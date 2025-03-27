@@ -1,5 +1,4 @@
-@extends('layouts.head-layout')
-@section('head')
+@include('layouts.head-layout')
 
 <body>
     <main class="principal">
@@ -17,5 +16,3 @@
     @endif
 
 </body>
-
-@endsection

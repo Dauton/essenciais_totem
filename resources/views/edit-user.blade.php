@@ -23,7 +23,12 @@
                     value="{{ $visualizer->nome_usuario }}">
             </div>
             @error('nome_usuario')
-            <p class="msg-input-erro">{{ $message }}</p>
+                <p class="msg-input-erro">{{ $message }}</p>
+                <style>
+                    #nome_usuario {
+                        border: 1px solid red;
+                    }
+                </style>
             @enderror
         </label>
 
@@ -35,7 +40,12 @@
                     value="{{ $visualizer->usuario }}">
             </div>
             @error('usuario')
-            <p class="msg-input-erro">{{ $message }}</p>
+                <p class="msg-input-erro">{{ $message }}</p>
+                <style>
+                    #usuario {
+                        border: 1px solid red;
+                    }
+                </style>
             @enderror
         </label>
 
@@ -51,7 +61,12 @@
                 </select>
             </div>
             @error('site_usuario')
-            <p class="msg-input-erro">{{ $message }}</p>
+                <p class="msg-input-erro">{{ $message }}</p>
+                <style>
+                    #site_usuario {
+                        border: 1px solid red;
+                    }
+                </style>
             @enderror
         </label>
 
@@ -66,7 +81,12 @@
                 </select>
             </div>
             @error('perfil')
-            <p class="msg-input-erro">{{ $message }}</p>
+                <p class="msg-input-erro">{{ $message }}</p>
+                <style>
+                    #perfil {
+                        border: 1px solid red;
+                    }
+                </style>
             @enderror
         </label>
 
@@ -79,6 +99,6 @@
 
     </form>
 
-    @endsection
-
 </section>
+
+@endsection

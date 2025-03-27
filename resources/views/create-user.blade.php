@@ -3,7 +3,7 @@
 
 <header class="contents-cabecalho">
     <h2>Usuários</h2>
-    <i class="fa-solid fa-industry"></i>
+    <i class="fa-solid fa-user-plus"></i>
 </header>
 
 <section class="conteudo">
@@ -23,7 +23,12 @@
                     value="{{ old('nome_usuario') }}">
             </div>
             @error('nome_usuario')
-            <p class="msg-input-erro">{{ $message }}</p>
+                <p class="msg-input-erro">{{ $message }}</p>
+                <style>
+                    #nome_usuario {
+                        border: 1px solid red;
+                    }
+                </style>
             @enderror
         </label>
 
@@ -35,7 +40,12 @@
                     value="{{ old('usuario') }}">
             </div>
             @error('usuario')
-            <p class="msg-input-erro">{{ $message }}</p>
+            <style>
+                #usuario {
+                    border: 1px solid red;
+                }
+            </style>
+                <p class="msg-input-erro">{{ $message }}</p>
             @enderror
         </label>
 
@@ -51,7 +61,12 @@
                 </select>
             </div>
             @error('site_usuario')
-            <p class="msg-input-erro">{{ $message }}</p>
+                <style>
+                    #site_usuario {
+                        border: 1px solid red;
+                    }
+                </style>
+                <p class="msg-input-erro">{{ $message }}</p>
             @enderror
         </label>
 
@@ -59,14 +74,19 @@
             <p>Perfil<span class="required-input"> *</span></p>
             <div>
                 <i class="fa-solid fa-user-shield"></i>
-                <select name="perfil">
+                <select name="perfil" id="perfil">
                     <option value="">Selecione uma categoria</option>
                     <option value="TI SITES" {{ old('perfil') == 'TI SITES' ? 'selected' : '' }}>TI SITES</option>
                     <option value="ADMIN" {{ old('perfil') == 'ADMIN' ? 'selected' : '' }}>ADMIN</option>
                 </select>
             </div>
             @error('perfil')
-            <p class="msg-input-erro">{{ $message }}</p>
+            <style>
+                #perfil {
+                    border: 1px solid red;
+                }
+            </style>
+                <p class="msg-input-erro">{{ $message }}</p>
             @enderror
         </label>
 
@@ -78,7 +98,12 @@
                     value="{{ old('senha') }}" autocomplete="new-password">
             </div>
             @error('senha')
-            <p class="msg-input-erro">{{ $message }}</p>
+                <p class="msg-input-erro">{{ $message }}</p>
+                <style>
+                    #senha {
+                        border: 1px solid red;
+                    }
+                </style>
             @enderror
         </label>
 
@@ -90,7 +115,12 @@
                     value="{{ old('repete_senha') }}">
             </div>
             @error('repete_senha')
-            <p class="msg-input-erro">{{ $message }}</p>
+                <p class="msg-input-erro">{{ $message }}</p>
+                <style>
+                    #repete_senha {
+                        border: 1px solid red;
+                    }
+                </style>
             @enderror
         </label>
 
@@ -101,6 +131,6 @@
 
     </form>
 
-    @endsection
-
 </section>
+
+@endsection

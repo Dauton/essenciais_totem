@@ -1,3 +1,13 @@
+<!--
+
+//=============================\\
+||  DEVELOPED BY DAUTON FÉLIX  ||
+||   ANALISTA DE TI PLENO      ||
+||           2025              ||
+\\=============================//
+
+-->
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -18,5 +28,3 @@
     <link rel="stylesheet" href="{{ asset('assets/fontawesome/css/all.min.css') }}">
 
 </head>
-
-@yield('head')

@@ -7,36 +7,34 @@
 </header>
 
 <section class="conteudo">
+    <article>
+        <h2>Gerenciamento de sites cadastrados</h2>
 
-    <h2>Gerenciamento de sites cadastrados</h2>
+        <a href="/create-site"><button>Cadastrar novo</button></a><br><br>
 
-    <a href="/create-site"><button>Cadastrar novo</button></a>
-    <br>
-    <br>
-
-    <table>
-        <thead>
-            <tr>
-                <th>UNIDADE</th>
-                <th>GERENCIAR</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach ($sites as $site)
-
+        <table>
+            <thead>
                 <tr>
-                    <td>{{ $site->site }}</td>
-                    <td>
-                        <a href="/editSite/{{ Crypt::encrypt($site->id) }}"><i class="fa-solid fa-square-pen" title="Editar unidade"></i></a>
-                        <a href="/deleteSite/{{ Crypt::encrypt($site->id) }}"><i class="fa-solid fa-square-xmark" title="Excluir unidade"></i></a>
-                        <a href="/site/{{ Crypt::encrypt($site->site) }}" target="_blank"><i class="fa-solid fa-eye" title="Visitar unidade"></i></a>
-                    </td>
+                    <th>UNIDADE</th>
+                    <th>GERENCIAR</th>
                 </tr>
+            </thead>
+            <tbody>
+                @foreach ($sites as $site)
 
-            @endforeach
-        </tbody>
-    </table>
+                    <tr>
+                        <td>{{ $site->site }}</td>
+                        <td>
+                            <a href="/editSite/{{ Crypt::encrypt($site->id) }}"><i class="fa-solid fa-square-pen" title="Editar unidade"></i></a>
+                            <a href="/deleteSite/{{ Crypt::encrypt($site->id) }}"><i class="fa-solid fa-square-xmark" title="Excluir unidade"></i></a>
+                            <a href="/site/{{ Crypt::encrypt($site->site) }}" target="_blank"><i class="fa-solid fa-eye" title="Visitar unidade"></i></a>
+                        </td>
+                    </tr>
 
-    @endsection
-
+                @endforeach
+            </tbody>
+        </table>
+    </article>
 </section>
+
+@endsection

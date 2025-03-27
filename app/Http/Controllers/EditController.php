@@ -22,10 +22,10 @@ class EditController extends Controller
 
         User::where('id', $id)->update(
             [
-                'nome_usuario' => $nome_usuario,
-                'usuario' => $usuario,
-                'site_usuario' => $site_usuario,
-                'perfil' => $perfil
+                'nome_usuario' => trim(mb_strtoupper($nome_usuario)),
+                'usuario' => trim(mb_strtoupper($usuario)),
+                'site_usuario' => trim(mb_strtoupper($site_usuario)),
+                'perfil' => trim(mb_strtoupper($perfil))
             ]
         );
 
@@ -66,31 +66,31 @@ class EditController extends Controller
         $url12 = $request->input('url12');
 
         Site::where('id', $id)->update([
-            'site' => $site,
-            'titulo_url1' => $titulo_url1,
-            'url1' => $url1,
-            'titulo_url2' => $titulo_url2,
-            'url2' => $url2,
-            'titulo_url3' => $titulo_url3,
-            'url3' => $url3,
-            'titulo_url4' => $titulo_url4,
-            'url4' => $url4,
-            'titulo_url5' => $titulo_url5,
-            'url5' => $url5,
-            'titulo_url6' => $titulo_url6,
-            'url6' => $url6,
-            'titulo_url7' => $titulo_url7,
-            'url7' => $url7,
-            'titulo_url8' => $titulo_url8,
-            'url8' => $url8,
-            'titulo_url9' => $titulo_url9,
-            'url9' => $url9,
-            'titulo_url10' => $titulo_url10,
-            'url10' => $url10,
-            'titulo_url11' => $titulo_url11,
-            'url11' => $url11,
-            'titulo_url12' => $titulo_url12,
-            'url12' => $url12,
+            'site' => trim(mb_strtoupper($site)),
+            'titulo_url1' => trim(mb_strtoupper($titulo_url1)),
+            'url1' => trim($url1),
+            'titulo_url2' => trim(mb_strtoupper($titulo_url2)),
+            'url2' => trim($url2),
+            'titulo_url3' => trim(mb_strtoupper($titulo_url3)),
+            'url3' => trim($url3),
+            'titulo_url4' => trim(mb_strtoupper($titulo_url4)),
+            'url4' => trim($url4),
+            'titulo_url5' => trim(mb_strtoupper($titulo_url5)),
+            'url5' => trim($url5),
+            'titulo_url6' => trim(mb_strtoupper($titulo_url6)),
+            'url6' => trim($url6),
+            'titulo_url7' => trim(mb_strtoupper($titulo_url7)),
+            'url7' => trim($url7),
+            'titulo_url8' => trim(mb_strtoupper($titulo_url8)),
+            'url8' => trim($url8),
+            'titulo_url9' => trim(mb_strtoupper($titulo_url9)),
+            'url9' => trim($url9),
+            'titulo_url10' => trim(mb_strtoupper($titulo_url10)),
+            'url10' => trim($url10),
+            'titulo_url11' => trim(mb_strtoupper($titulo_url11)),
+            'url11' => trim($url11),
+            'titulo_url12' => trim(mb_strtoupper($titulo_url12)),
+            'url12' => trim($url12),
         ]);
 
         return redirect ('/sites')->with('alertSuccess', 'Site editado com sucesso.');

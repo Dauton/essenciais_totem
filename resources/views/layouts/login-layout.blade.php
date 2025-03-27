@@ -1,5 +1,4 @@
-@extends('layouts.head-layout')
-@section('head')
+@include('layouts.head-layout')
 
 
 <link rel='stylesheet' type="text/css" href="{{ asset('assets/css/login.css') }}">
@@ -17,4 +16,3 @@
 </body>
 
 </html>
-@endsection
