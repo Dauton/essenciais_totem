@@ -5,6 +5,7 @@ use App\Http\Controllers\CreateSiteController;
 use App\Http\Controllers\CreateUserController;
 use App\Http\Controllers\EditController;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\PasswordController;
 use App\Http\Middleware\CheckLogged;
 use App\Http\Middleware\CheckNotLogged;
 use App\Http\Middleware\CheckPerfil;
@@ -50,17 +51,17 @@ use Illuminate\Support\Facades\Route;
                     // EXIBIÇÃO DA PÁGINA DE USUÁRIOS...
                     Route::get('/users', [PagesController::class, 'showUsersPage'])->name('users');
 
+                    // EXECUÇÃO DA PÁGINA DE EXCLUSÃO DE USUÁRIO...
+                    Route::get('/deleteUser/{id}', [PagesController::class, 'DeleteUserPage'])->name('deleteUser');
+
                     // EXIBIÇÃO DA PÁGINA DE CRIAÇÃO DE USUÁRIO...
                     Route::get('/create-user', [PagesController::class, 'showCreateUserPage'])->name('newUser');
 
                     // EXIBIÇÃO DE EDIÇÃO DE USUÁRIO...
                     Route::get('/editUser/{id}', [PagesController::class, 'showEditUserPage'])->name('editUser');
 
-                    // EXECUÇÃO DA PÁGINA DE EXCLUSÃO DE USUÁRIO...
-                    Route::get('/deleteUser/{id}', [PagesController::class, 'DeleteUserPage'])->name('deleteUser');
-
-                    // EXECUSÃO DA EDIÇÃO DO USUÁRIO...
-                    Route::post('/editUser', [EditController::class, 'editUser'])->name('editUser');
+                    // EXIBIÇÃO RESET DE SENHA DO USUÁIRO...
+                    Route::get('/update-password/{id}', [PagesController::class, 'showUpdatePasswordPage'])->name('update-password');
 
                     // EXECUÇÃO DA EXCLUSÃO DO SITE...
                     Route::get('/deleteSite/{id}', [PagesController::class, 'deleteSitePage'])->name('deleteSite');
@@ -69,6 +70,15 @@ use Illuminate\Support\Facades\Route;
 
                     // CRIAÇÃO DE USUÁRIO...
                     Route::post('/createUser', [CreateUserController::class, 'createUser']);
+
+                    // EXECUÇÃO DA PÁGINA DE EXCLUSÃO DE USUÁRIO...
+                    Route::get('/deleteUser/{id}', [PagesController::class, 'DeleteUserPage'])->name('deleteUser');
+
+                    // EXECUSÃO DA EDIÇÃO DO USUÁRIO...
+                    Route::post('/editUser', [EditController::class, 'editUser'])->name('editUser');
+
+                    // EXECUÇÃO DO UPDATE DE SENHA DO USUÁRIO...
+                    Route::post('/updatePassword/{id}', [PasswordController::class, 'updatePassword'])->name('updatePassword');
             });
 
 

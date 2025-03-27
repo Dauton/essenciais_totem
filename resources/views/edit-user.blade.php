@@ -101,4 +101,12 @@
 
 </section>
 
+<div class="floating-buttons">
+    <a href="/update-password/{{Crypt::encrypt($visualizer->id)}}">
+        <button type="button" title="Resetar a senha">
+            <i class="fa-solid fa-key"></i>
+        </button>
+    </a>
+</div>
+
 @endsection

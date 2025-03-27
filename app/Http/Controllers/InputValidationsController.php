@@ -24,7 +24,7 @@ class InputValidationsController extends Controller
         );
     }
 
-    public static function validationCreateUser(Request $request)
+    public static function validationUser(Request $request)
     {
         $request->validate(
             [

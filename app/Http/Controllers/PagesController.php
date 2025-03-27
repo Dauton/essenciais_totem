@@ -74,6 +74,21 @@ class PagesController extends Controller
 
     }
 
+    public function showUpdatePasswordPage($id)
+    {
+        // SE TENTAR ACESSAR UM ID ENCRIPTADO INVÁLIDO, SERÁ REDIRECIONADO À PÁGINA DE USUÁRIOS...
+        try {
+            $id = Crypt::decrypt($id);
+        } catch (DecryptException $e) {
+            return redirect('/users')->with('alertError', 'Erro ao tentar editar usuário.');
+        }
+
+        $visualizer = User::where('id', $id)->first();
+        return view('/update-password', compact('visualizer'));
+
+    }
+
+
     // EXCLUI O USUÁRIO SELECIONADO...
     public function deleteUserPage($id)
     {

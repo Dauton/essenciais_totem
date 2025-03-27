@@ -11,7 +11,7 @@ class CreateUserController extends Controller
     public function createUser(Request $request)
     {
 
-        InputValidationsController::validationCreateUser($request);
+        InputValidationsController::validationUser($request);
 
         $nome_usuario = $request->input('nome_usuario');
         $usuario = $request->input('usuario');
