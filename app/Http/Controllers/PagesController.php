@@ -89,15 +89,6 @@ class PagesController extends Controller
     }
 
 
-    // EXCLUI O USUÁRIO SELECIONADO...
-    public function deleteUserPage($id)
-    {
-        $id = Crypt::decrypt($id);
-        User::where('id', $id)->delete();
-        return redirect('/users')->with('alertSuccess', 'Usuário excluído com sucesso.');
-    }
-
-
 
 // --- SITES ---
     public function showCreateSitePage()
@@ -124,12 +115,5 @@ class PagesController extends Controller
         $visualizer = Site::where('id', $id)->first();
         return view('edit-site', compact('visualizer'));
 
-    }
-
-    public function deleteSitePage($id)
-    {
-        $id = Crypt::decrypt($id);
-        Site::where('id', $id)->delete();
-        return redirect('/sites')->with('alertSuccess', 'Site excluído com sucesso.');
     }
 }

@@ -98,6 +98,31 @@ class InputValidationsController extends Controller
         );
     }
 
+    public static function validationUpdatePassword(Request $request)
+    {
+        $request->validate(
+            [
+                'senha' => [
+                    'required',
+                    'min: 12',
+                    'regex: /[0-9]/',
+                    'regex: /[A-Z]/',
+                ],
+                'repete_senha' => [
+                    'required',
+                    'same:senha'
+                ]
+            ],
+            [
+                'senha.required' => 'A senha deve ser preenchida.',
+                'senha.min' => 'A senha deve possuir no mínimo :min caracteres.',
+                'senha.regex' => 'A senha deve possuir pelo menos um número e uma letra maiúscula.',
+
+                'repete_senha' => 'As senhas não conferem.'
+            ]
+        );
+    }
+
     public static function validationSite(Request $request)
     {
         $request->validate(

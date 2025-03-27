@@ -8,12 +8,14 @@
 
 <section class="conteudo">
 
-    <h2>Editar usuário</h2>
+    <h2>Resetar senha</h2>
 
-    <form method="post" action="/updatePassword" id="form-user-page">
+
+    <form method="post" action="/updatePassword/{{ $visualizer->id }}" id="form-user-page">
         @csrf
+
         <header class="contents-cabecalho">
-            <h2>Dados do usuário</h2>
+            <h2>Senha do usuário</h2>
         </header>
 
         <label for="senha">
@@ -47,8 +49,6 @@
                 </style>
             @enderror
         </label>
-
-        <input type="hidden" name="id" value="{{ $visualizer->id }}">
 
         <div class="div-btns">
             <button type="submit">Submeter</button>
