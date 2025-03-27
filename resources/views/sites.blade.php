@@ -7,10 +7,9 @@
 </header>
 
 <section class="conteudo">
-    <article>
         <h2>Gerenciamento de sites cadastrados</h2>
 
-        <a href="/create-site"><button>Cadastrar novo</button></a><br><br>
+        <a href="/create-site"><button>Cadastrar novo</button></a><br>
 
         <table>
             <thead>
@@ -34,7 +33,6 @@
                 @endforeach
             </tbody>
         </table>
-    </article>
 </section>
 
 @endsection

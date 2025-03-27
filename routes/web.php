@@ -43,7 +43,7 @@ use Illuminate\Support\Facades\Route;
             Route::get('/deleteSite/{id}', [PagesController::class, 'deleteSitePage'])->name('deleteSite');
 
             // EXECUSÃO DA EDIÇÃO DO SITE...
-            Route::post('/editSite', [EditController::class, 'editSite'])->name('editSite');
+            Route::post('/editSite{id}', [EditController::class, 'editSite'])->name('editSite');
 
             // VERIRICAÇÃO DO PERFIL DO USUÁRIO...
             Route::middleware([CheckPerfil::class])->group(function() {
