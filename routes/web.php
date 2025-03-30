@@ -44,7 +44,7 @@ use Illuminate\Support\Facades\Route;
         // EXECUÇÕES...
 
             // EXECUSÃO DA EDIÇÃO DO SITE...
-            Route::post('/editSite{id}', [EditController::class, 'editSite'])->name('editSite');
+            Route::post('/editSite/{id}', [EditController::class, 'editSite'])->name('editSite');
 
             // EXECUÇÃO DO UPDATE DE SENHA DO USUÁRIO...
             Route::post('/updatePassword/{id}', [PasswordController::class, 'updatePassword'])->name('updatePassword');
@@ -72,7 +72,7 @@ use Illuminate\Support\Facades\Route;
                     Route::post('/createUser', [CreateUserController::class, 'createUser']);
 
                     // EXECUSÃO DA EDIÇÃO DO USUÁRIO...
-                    Route::post('/editUser', [EditController::class, 'editUser'])->name('editUser');
+                    Route::post('/editUser/{id}', [EditController::class, 'editUser'])->name('editUser');
 
                     // EXECUÇÃO DA EXCLUSÃO DE USUÁRIO...
                     Route::get('/deleteUser/{id}', [DeleteController::class, 'deleteUser'])->name('deleteUser');

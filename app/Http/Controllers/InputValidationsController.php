@@ -107,6 +107,7 @@ class InputValidationsController extends Controller
                     'min: 12',
                     'regex: /[0-9]/',
                     'regex: /[A-Z]/',
+                    'regex: /[!@#$%^&*(),.?":{}|<>]/'
                 ],
                 'repete_senha' => [
                     'required',
@@ -116,7 +117,7 @@ class InputValidationsController extends Controller
             [
                 'senha.required' => 'A senha deve ser preenchida.',
                 'senha.min' => 'A senha deve possuir no mínimo :min caracteres.',
-                'senha.regex' => 'A senha deve possuir pelo menos um número e uma letra maiúscula.',
+                'senha.regex' => 'A senha deve possuir pelo menos um número, uma letra maiúscula e um caractere especial.',
 
                 'repete_senha' => 'As senhas não conferem.'
             ]

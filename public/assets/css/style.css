@@ -181,6 +181,7 @@ form .contents-cabecalho h2 {
     border-radius: 3px;
     background: #ff6666;
     color: #fff;
+    animation: alert .5s;
 }
 
 .alert-success {
@@ -189,4 +190,9 @@ form .contents-cabecalho h2 {
 
 .alert-info {
     background: #f0cc00;
+}
+@keyframes alert {
+    0% {
+        right: -100px;
+    }
 }

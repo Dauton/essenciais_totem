@@ -1,9 +1,9 @@
-<form method="post" action="/editSite">
+<form method="post" action="/editSite/{{ $visualizer->id }}">
     @csrf
 
     <div class="box-form" id="box-form-first">
         <header class="contents-cabecalho">
-            <h2>Ferramenta 1</h2>
+            <h2>Descrição do site</h2>
         </header>
         <label for="site">
             <p>Qual o site?<span class="required-input"> *</span></p>
@@ -334,8 +334,6 @@
             @enderror
         </label>
     </div>
-
-    <input type="hidden" name="id" value="{{ $visualizer->id }}">
 
     <div class="div-btns">
         <button type="submit">Submeter</button>

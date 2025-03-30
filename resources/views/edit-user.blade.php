@@ -10,7 +10,7 @@
 
     <h2>Editar usuário</h2>
 
-    <form method="post" action="/editUser" id="form-user-page">
+    <form method="post" action="/editUser/{{ $visualizer->id }}" id="form-user-page">
         @csrf
         <header class="contents-cabecalho">
             <h2>Dados do usuário</h2>

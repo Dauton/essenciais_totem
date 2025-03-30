@@ -10,11 +10,10 @@ use Illuminate\Support\Facades\DB;
 
 class EditController extends Controller
 {
-    public function editUser(Request $request)
+    public function editUser(Request $request, $id)
     {
         InputValidationsController::validationEditUser($request);
 
-        $id = $request->input('id');
         $nome_usuario = $request->input('nome_usuario');
         $usuario = $request->input('usuario');
         $site_usuario = $request->input('site_usuario');
@@ -33,12 +32,11 @@ class EditController extends Controller
 
     }
 
-    public function editSite(Request $request)
+    public function editSite(Request $request, $id)
     {
 
         InputValidationsController::validationSite($request);
 
-        $id = $request->input('id');
         $site = $request->input('site');
         $titulo_url1 = $request->input('titulo_url1');
         $url1 = $request->input('url1');
