@@ -13,6 +13,7 @@
 
 <head>
     <script src="{{ asset("assets/js/app.js") }}" defer></script>
+    <script src="{{ asset("assets/js/jquery.js") }}" defer></script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

@@ -42,15 +42,15 @@
     </main>
 
     @if (session('alertError'))
-        <p class="alert-error">{{session('alertError')}}</p>
+        <p class="alert-error" id="alert">{{session('alertError')}}</p>
     @endif
 
     @if(session('alertSuccess'))
-        <p class="alert-success">{{ session('alertSuccess') }}</p>
+        <p class="alert-success" id="alert">{{ session('alertSuccess') }}</p>
     @endif
 
     @if(session('alertInfo'))
-        <p class="alert-info">{{ session('alertInfo') }}</p>
+        <p class="alert-info" id="alert">{{ session('alertInfo') }}</p>
     @endif
 
 </body>

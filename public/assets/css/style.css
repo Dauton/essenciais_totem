@@ -77,7 +77,7 @@ body {
 }
 
 .links-container {
-    width: 775px;
+    width: 860px;
     margin: 0 auto;
     position: absolute;
     top: 50%;
@@ -103,25 +103,29 @@ form .contents-cabecalho h2 {
     height: 100%;
     padding: 25px;
     display: flex;
-    align-items: center;
+    align-items: stretch; /* Faz as divs terem a mesma altura */
     flex-wrap: wrap;
     gap: 15px;
 }
 
 .link-box {
-    width: 170px;
+    width: 190px;
+    min-height: 150px;
     padding: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     border-radius: 3px;
     background: var(--primary-color);
     color: #fff;
     font-size: 20px;
     font-weight: 100;
+    text-align: center;
     cursor: pointer;
 }
+
 
 .link-box:hover {
     background: var(--hover-primary-color);
@@ -129,22 +133,6 @@ form .contents-cabecalho h2 {
 
 .link-box i {
     font-size: 50px;
-}
-
-.floating-buttons {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.floating-buttons button {
-    width: 50px;
-    height: 50px;
-    padding: 7px;
-    font-size: 30px;
 }
 
 .rodape {
@@ -181,7 +169,7 @@ form .contents-cabecalho h2 {
     border-radius: 3px;
     background: #ff6666;
     color: #fff;
-    animation: alert .5s;
+    animation: alert 5s ease 5s forwards;
 }
 
 .alert-success {
@@ -193,6 +181,9 @@ form .contents-cabecalho h2 {
 }
 @keyframes alert {
     0% {
-        right: -100px;
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }

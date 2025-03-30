@@ -29,3 +29,21 @@ button:hover {
     background: var(--hover-primary-color);
     color: #fff;
 }
+
+
+.floating-buttons {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 2;
+}
+
+.floating-buttons button {
+    width: 50px;
+    height: 50px;
+    padding: 7px;
+    font-size: 30px;
+}
