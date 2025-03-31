@@ -21,6 +21,11 @@ class PasswordController extends Controller
             'senha' => password_hash($senha, PASSWORD_ARGON2ID)
         ]);
 
-        return redirect('/users')->with('alertSuccess', 'Senha alterada com sucesso.');
+        if(session('user.perfil') === 'ADMIN') {
+            return redirect('/users')->with('alertSuccess', 'Senha alterada com sucesso.');
+        } else {
+            return redirect('/home')->with('alertSuccess', 'Senha alterada com sucesso.');
+        }
+
     }
 }

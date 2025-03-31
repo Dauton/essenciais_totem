@@ -11,8 +11,10 @@
     <h2>Meu site</h2>
 
     @if($site === null)
-    <p>Site não cadastrado</p>
+        <p>Site <b>{{ session('user.site_usuario') }}</b> não cadastrado.</p><br>
+        <a href="/create-site"><button type="button">Cadastre seu site</button></a>
     @else
+
     <form method="post" action="/createSite">
         @csrf
 

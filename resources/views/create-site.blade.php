@@ -71,40 +71,6 @@
                     </style>
                 @enderror
             </label>
-
-            <label for="senha">
-                <p>Senha<span class="required-input"> *</span></p>
-                <div>
-                    <i class="fa-solid fa-lock"></i>
-                    <input type="password" name="senha" id="senha" placeholder="Senha de acesso"
-                        value="{{ old('senha') }}" autocomplete="new-password">
-                </div>
-                @error('senha')
-                    <p class="msg-input-erro">{{ $message }}</p>
-                    <style>
-                        #senha {
-                            border: 1px solid red;
-                        }
-                    </style>
-                @enderror
-            </label>
-
-            <label for="repete_senha">
-                <p>Repita a senha<span class="required-input"> *</span></p>
-                <div>
-                    <i class="fa-solid fa-lock"></i>
-                    <input type="password" name="repete_senha" id="repete_senha" placeholder="Repita a senha de acesso"
-                        value="{{ old('repete_senha') }}">
-                </div>
-                @error('repete_senha')
-                    <p class="msg-input-erro">{{ $message }}</p>
-                    <style>
-                        #repete_senha {
-                            border: 1px solid red;
-                        }
-                    </style>
-                @enderror
-            </label>
         </div>
 
         <div class="box-form">

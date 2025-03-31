@@ -1,3 +1,5 @@
+
+
 @include('layouts.head-layout')
 
 <body>

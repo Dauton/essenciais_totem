@@ -14,7 +14,7 @@ class PagesController extends Controller
         // Exibe todos os sites cadastrados em ordem alfabética por site...
         $sites = Site::orderBy('site', 'asc')->get();
 
-        return view('essenciais',compact('sites'));
+        return view('essenciais', compact('sites'));
     }
 
     public function showSitePage($site)
